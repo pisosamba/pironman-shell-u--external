@@ -1,0 +1,24 @@
+{
+  "name": "Pironman Shell UI (External)",
+  "version": "1.2",
+  "slug": "pironman_shell_ui_external",
+  "description": "Externý shell terminál pre ovládanie Pironman 5 bez ingressu",
+  "startup": "services",
+  "boot": "auto",
+  "hassio_api": false,
+  "hassio_role": "default",
+  "homeassistant_api": false,
+  "apparmor": false,
+  "host_network": true,
+  "ingress": false,
+  "webui": "http://[HOST]:8099",
+  "panel_icon": "mdi:console",
+  "ports": {
+    "8099/tcp": 8099
+  },
+  "privileged": ["SYS_ADMIN", "NET_ADMIN"],
+  "map": ["config:rw", "addons:rw", "ssl", "media:rw", "share:rw"],
+  "options": {},
+  "schema": {},
+  "arch": ["aarch64", "armv7"]
+}
